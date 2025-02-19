@@ -19,7 +19,7 @@ public class Variables {
         System.out.println(Fullname);
 
         int x=5, y=6, z=7;
-        System.out.println(x + y + z); //for numeric values the plus sighn works as an operator
+        System.out.println(x + y + z); //for numeric values the plus sign works as an operator
         
         String studentName = "Sanele";
         int studentnumber = 202056687;
