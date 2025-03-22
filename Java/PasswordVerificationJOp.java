@@ -25,11 +25,11 @@ public class PasswordVerificationJOp {
 							null);
 					attempts = 3;
 				}
-			}while(password.trim().isEmpty());
+			}while(password.trim().isEmpty());//trim() it removes blank spaces and isEmpty() checks if it is empty 
 
 			do {
 				confirmpassword = JOptionPane.showInputDialog("Confirm Password: ");
-				if(confirmpassword == null) {
+				if(confirmpassword == null) {//if cancel button is pressed then do
 					JOptionPane.showMessageDialog(null, "Aborted!!", "Warning!", JOptionPane.WARNING_MESSAGE, null);
 					//attempts = 0;
 					//break;
@@ -45,11 +45,12 @@ public class PasswordVerificationJOp {
 				}
 			}while(confirmpassword.trim().isEmpty());
 			
-			if(password == confirmpassword){
-				JOptionPane.showMessageDialog(null, "Welcome to the Call Of DUty VIP section", 
+			if(password.equals(confirmpassword){
+				JOptionPane.showMessageDialog(null, "Welcome to the Call Of Duty VIP section", 
 						"Success!", 
 						JOptionPane.INFORMATION_MESSAGE, null);
-				attempts = 0;
+				//attempts = 0;
+				return;
 			}else{
 				attempts = attempts -1;
 				JOptionPane.showMessageDialog(null, "Passwords do not match! " + "|| You have \"" + attempts + "\" Remaining!!",
